@@ -1,0 +1,38 @@
+{
+  "name": "vote-brexit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compose-function": "^3.0.3",
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "googleapis": "^27.0.0",
+    "mem": "^4.3.0",
+    "memoize-one": "^5.0.4",
+    "node-fetch": "^2.3.0",
+    "p-pipe": "^3.0.0",
+    "serverless-http": "^2.0.1"
+  },
+  "brexit.vote": {
+    "spreadsheet": {
+      "authority": "https://sheets.googleapis.com",
+      "path": "/v4/spreadsheets",
+      "sheet": "1lyOFnh5TdSr1G4v2mvS6YYUdpM3kxEpoCDusQKXHFn0",
+      "range": "A2:C651"
+    },
+    "theyworkforyou": {
+      "authority": "https://www.theyworkforyou.com",
+      "path": "/api/getConstituency"
+    }
+  },
+  "devDependencies": {
+    "serverless-offline": "^4.9.4"
+  }
+}
